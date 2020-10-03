@@ -13,11 +13,11 @@ def get_file_lines(filename):
 
 def lines_printed_backwards(lines_list):
       
-      lines_list.reverse()
+    lines_list.reverse()
       
-      line_length = len(lines_list)
+    line_length = len(lines_list)
 
-      for i in range(line_length):
+    for i in range(line_length):
         line_number = line_length - i
         line = lines_list[i]
         print(f"{line_number} {line} ")
@@ -35,13 +35,17 @@ def lines_printed_random(lines_list):
      print(line_random)
 
 def lines_printed_custom(lines_list):
+
+    lines_list.reverse()
+      
     line_length = len(lines_list)
-    line_first_half = ['0', '1', '2', '3', '4', '5', '6', '7', '8']
-    while str(line_length) in line_first_half:
-        print(lines_list[1:8])
-    else:
-        lines_reversed = lines_list.reverse()
-        print(lines_reversed)
+
+    for i in range(line_length):
+        line_number = line_length + i
+        line = lines_list[i]
+        print(f" {line} {line_number}  ")
+    
+
 
 
     
@@ -55,9 +59,9 @@ def lines_printed_custom(lines_list):
 #
 #
 #
-
-
-
+# 
+# 
+# 
 # --------------------------------------
 
 poems = get_file_lines('poem.txt') 
@@ -70,14 +74,6 @@ lines_printed_custom(poems)
 
 
 
-
-
-
-
-#  ^^^ Uncomment each line after your finished you defining the function.
-# lines = inline.readlines()
-# print_lines = print(lines.reverse())
-# return print_lines
 
 
 
